@@ -12,37 +12,39 @@ void del(int a[],int n,int i)
 void add(int a[],int n)
 {
 	int i;
-	for(i=0;i<n-1;i++){
-		printf("%4d ",a[i]);
+	for(i=0;i<n;i++){
+		printf("%4d",a[i]);
 	}
 }
 
 int find(int a[],int n,int x)
 {
-	int i,t;
-	for(i=0;i<n-1;i++){
+	int i,t=-1;
+	for(i=0;i<n;i++){
 		if(a[i]==x){
 			t=i;
 			break;
 		}
-		else
-		t=-1;
 	}
-	return t;
+	if(t==-1)return -1;
+	else return t;
 }
 
 int main()
 {
 	int n,i,a[10],j,x;
 	scanf("%d",&n);
-	for(j=0;j<n;j++){
-		scanf("%d",&a[j]);
+	for(i=0;i<n;i++){
+		scanf("%d",&a[i]);
 	}
 	scanf("%d",&x);
-	i=find(a,n,x);
-	if(i>-1){
-	   del(a,n,i);
+	j=find(a,n,x);
+	if(j==-1){
+	   printf("Not Found");
 	}
-	add(a,n);
+	else
+    {
+    	del(a,n,j);add(a,n-1);
+	}
 	return 0;
 }
