@@ -4,12 +4,16 @@ using namespace std;
 int main()
 {
 	char s;
-	int c=0;
+	int a=0,b=0,c=0;
 	while(s=getchar(),s!='\n'){
-		if(s>=0&&s<=9)
+		if(isalnum(s))
+		a++;
+		else if(isdigit(s))
+		b++;
+		else
 		c++;
 	}
-	printf("%d\n",c);
+	printf("%d %d %d\n",a,b,c);
 	return 0;
 }
 
