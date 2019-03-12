@@ -3,13 +3,13 @@ using namespace std;
 
 int main()
 {
-	int n,s=0,x;
+	int n,s,x=0;
 	scanf("%d",&n);
-	for(int i=1;i<=n;i++){
-		x=i*(i+1);
-		s+=x;
+	for(int i=1;i<=n;i++) {
+		s=i*(i+1);
+		x+=s;
 	}
-	printf("%d",s);
+	printf("%d",x);
 	return 0;
 }
 
