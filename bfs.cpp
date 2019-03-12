@@ -10,6 +10,7 @@ int maze[5][5]={
 	0,0,0,1,0,
 } ;
 
+int step[5][5]; 
 int dx[4] ={0,1,0,-1};
 int dy[4] ={1,0,-1,0};
 
@@ -61,6 +62,7 @@ State bfs(){
 			next.y=ny;
 			next.path[cur.step]=i;
 			next.step=cur.step+1;
+			step[nx][ny] = next.step;
 			q.push(next);
 		}
 		}
