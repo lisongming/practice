@@ -3,16 +3,18 @@ using namespace std;
  
 int main()
 {
-    int a,b,c,d,s;
+    double a,b,c,d,s,y;
     double x;
-    scanf("%d %d %d %d",&a,&b,&c,&d);
+    scanf("%lf %lf %lf %lf",&a,&b,&c,&d);
     s=100-(a*5)-(b*12)-(c*15);
-    x=s*0.3+d*0.7;
-    if(x<60){
-        printf("Fail");
+    if(s<0) s=0;
+    x=s*0.3;
+	y=d*0.7;
+    if(x+y>=60){
+        printf("Pass");
     }
     else{
-        printf("Pass");
+        printf("Fail");
     }
     return 0;
 }
