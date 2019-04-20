@@ -25,7 +25,7 @@ bool panduan(int x,int y)
 
 void dfs(int x,int y)
 {
-//	printf("x:%d y£º%d, temp: %d\n",x,y, temp);
+	printf("x:%d y£º%d, temp: \n",x,y);
 	for(int i=0;i<4;i++){
 		int nx=x+dx[i];
 		int ny=y+dy[i];
