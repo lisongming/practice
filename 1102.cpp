@@ -1,6 +1,4 @@
-#include<bits/stdc++.h>
-using namespace std;
-
+#include<stdio.h>
 double CancelFee(double price)
 {
     double x=price*0.05;
@@ -10,13 +8,11 @@ double CancelFee(double price)
     else if(x-0.25>=y&&x-0.25<y+0.5)
     y+=0.5;
     else y+=1;
-    printf("%.1f",y);
+    printf("%.2f",y);
 }
 int main()
 {
-    double x;
-    scanf("%lf",&x);
-    CancelFee(x);
+	double s;
+	scanf("%lf",&s);
+	CancelFee(s);
 }
-
-
